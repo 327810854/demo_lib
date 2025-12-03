@@ -1,1 +1,6 @@
 ﻿Pillow>=10.0.0
+git+https://github.com/327810854/dataproc.git
+librosa
+soundfile
+scipy
+numpy
