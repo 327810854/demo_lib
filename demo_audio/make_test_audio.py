@@ -19,7 +19,7 @@ sf.write("sample_data/tone_with_silence.wav", tone_with_silence, sr)
 print("Created sample_data/tone_with_silence.wav (1s silence + 2s tone + 1s silence)")
 
 
-noise = 0.2 * np.random.randn(len(pure_tone))
+noise = 0.5 * np.random.randn(len(pure_tone))
 noisy_tone = pure_tone + noise
 sf.write("sample_data/noisy_tone.wav", noisy_tone, sr)
 print("Created sample_data/noisy_tone.wav (pure tone + noise)")
