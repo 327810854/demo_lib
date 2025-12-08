@@ -1,4 +1,4 @@
-﻿# Python caches
+# Python caches
 __pycache__/
 *.pyc
 
@@ -12,3 +12,4 @@ examples/output/
 # OS/IDE artifacts
 Thumbs.db
 .DS_Store
+*.egg-info/

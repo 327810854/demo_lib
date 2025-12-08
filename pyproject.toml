@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "demo_lib"
+version = "0.1.0"
+description = "Demo project that uses dataproc via submodule and runs image examples."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "Pillow>=10.0.0",
+]
+authors = [{ name = "dataproc team" }]
+
+[project.urls]
+Homepage = "https://github.com/327810854/demo_lib"
+
+[tool.setuptools.packages.find]
+where = ["examples"]
+include = ["examples*"]

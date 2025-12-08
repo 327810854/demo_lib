@@ -1,4 +1,4 @@
-﻿# demo_lib
+# demo_lib
 
 A standalone repository for running demos that use the dataproc library as a Git submodule.
 
@@ -18,9 +18,13 @@ A standalone repository for running demos that use the dataproc library as a Git
    python -m venv .venv
    .\.venv\Scripts\Activate.ps1
    `
-4. Install dependencies:
+4. Install dependencies (choose one):
    `powershell
+   # Option A: requirements.txt
    pip install -r requirements.txt
+
+   # Option B: pyproject.toml (recommended)
+   pip install .
    `
 
 ## Run the demo
@@ -38,7 +42,7 @@ The script will generate an input.jpg if missing and save outputs to examples\ou
 
 - libs/dataproc: Git submodule pointing to the library repository
 - examples/: Demo scripts and assets
-- equirements.txt: Demo dependencies
+- requirements.txt: Demo dependencies
 
 ## Notes
 
