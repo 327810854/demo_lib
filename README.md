@@ -1,46 +1,37 @@
-﻿# demo_lib
+﻿# README for demo
 
-A standalone repository for running demos that use the dataproc library as a Git submodule.
+This repository contains a simple interactive demo program that showcases how to use the video processing functions from the dataproc main library.
 
-## Setup (Windows)
+It is designed for class presentations.
+# Structure
+dataproc-demo/
+ ├── demo.py
+ ├── examples/
+ │    ├── sample.mp4
+ │    └── output_demo.mp4
+ ├── README.md
+ ├── requirements.txt
 
-1. Clone this repo:
-   `powershell
-   git clone https://github.com/327810854/demo_lib
-   cd demo_lib
-   `
-2. Initialize submodules:
-   `powershell
-   git submodule update --init --recursive
-   `
-3. Create and activate a virtual environment (optional but recommended):
-   `powershell
-   python -m venv .venv
-   .\.venv\Scripts\Activate.ps1
-   `
-4. Install dependencies:
-   `powershell
-   pip install -r requirements.txt
-   `
+# How to Run
+git clone https://github.com/327810854/dataproc-demo.git
+cd dataproc-demo
+pip install -r requirements.txt
+python demo.py
 
-## Run the demo
+# Demo Menu (demo_video.py)
+When you run the program, you will see:
+=== Video Processing Demo ===
+1) Cut Clip
+2) Resize Video
+3) Convert to Grayscale
+4) Change Speed
+5) Add Watermark
+0) Exit
+Users can directly test the functions you implemented in dataproc.
+# Usage Examples (Same as main library)
+cut_clip("examples/sample.mp4", "examples/out_cut.mp4", 3, 10)
+resize_video("examples/sample.mp4", "examples/out_small.mp4", 0.5)
+to_grayscale("examples/sample.mp4", "examples/out_gray.mp4")
+change_speed("examples/sample.mp4", "examples/out_fast.mp4", 2.0)
+add_watermark("examples/sample.mp4", "examples/out_wm.mp4", "logo.png")
 
-Set PYTHONPATH so Python can import the dataproc package from the submodule, then run the demo:
-
-`powershell
-set PYTHONPATH=libs\dataproc
-python -m examples.image_demo
-`
-
-The script will generate an input.jpg if missing and save outputs to examples\output\.
-
-## Project layout
-
-- libs/dataproc: Git submodule pointing to the library repository
-- examples/: Demo scripts and assets
-- equirements.txt: Demo dependencies
-
-## Notes
-
-- If ModuleNotFoundError: No module named 'dataproc' occurs, ensure PYTHONPATH is set correctly as shown above.
-- Demo outputs are ignored via .gitignore.
