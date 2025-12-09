@@ -6,7 +6,7 @@ import os
 import logging
 from datetime import datetime
 from config import *
-from ossing.ossing import TextCleaner, SensitiveWordFilter, Tokenizer
+from ossing import TextCleaner, SensitiveWordFilter, Tokenizer
 
 # 로깅 설정
 logging.basicConfig(
