@@ -25,7 +25,11 @@ def check_input():
    
     if not INPUT_VIDEO.exists():
         print(f"[ERROR] {INPUT_VIDEO} not found.")
+<<<<<<< HEAD
         print("Please name the example video 'sample.mp4' and place it in the 'demo_lib/examples/' directory.")
+=======
+        print('Please name the example video "sample.mp4" and place it in the "demo_lib/examples/" directory.')
+>>>>>>> 23d60b7aa54e10d34dbe0d1943e464502eab6820
         raise SystemExit(1)
 
 
