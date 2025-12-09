@@ -25,7 +25,7 @@ def check_input():
    
     if not INPUT_VIDEO.exists():
         print(f"[ERROR] {INPUT_VIDEO} not found.")
-        print("Please name the example video "sample.mp4" and place it in the "demo_lib/examples/" directory.")
+        print('Please name the example video "sample.mp4" and place it in the "demo_lib/examples/" directory.')
         raise SystemExit(1)
 
 
@@ -33,7 +33,7 @@ def demo_cut():
    
     output = EXAMPLES_DIR / "cut_demo.mp4"
     print(f"[1] Cutting video -> {output.name}")
-    cut_clip(str(INPUT_VIDEO), str(output), start_time=5, end_time=10)
+    cut_clip(str(INPUT_VIDEO), str(output), start_time=5, end_time=9)
 
 
 def demo_resize_scale():
