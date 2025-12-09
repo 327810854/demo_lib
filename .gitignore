@@ -12,3 +12,4 @@ examples/output/
 # OS/IDE artifacts
 Thumbs.db
 .DS_Store
+demo_tabular/out/
