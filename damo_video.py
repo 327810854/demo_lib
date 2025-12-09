@@ -20,19 +20,25 @@ def menu():
 
 
 def get_input_output():
-    # Input file name
+    # === Input file name ===
     in_name = input("Input file name(default sample.mp4): ").strip()
+
     if in_name == "":
         in_name = "sample.mp4"
-    elif "." not in in_name:
+    if "." not in in_name:
         in_name += ".mp4"
 
-    # Output file name
+    in_name = "examples/" + in_name   
+
+    # === Output file name ===
     out_name = input("Output file name(default output_demo.mp4): ").strip()
+
     if out_name == "":
         out_name = "output_demo.mp4"
-    elif "." not in out_name:
+    if "." not in out_name:
         out_name += ".mp4"
+
+    out_name = "examples/" + out_name  
 
     return in_name, out_name
 
