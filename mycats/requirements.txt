@@ -1,0 +1,8 @@
+# 생성한 라이브러리에 대한 의존성 (Git URL 사용)
+git+https://github.com/yourteam/ossing.git@main#egg=ossing
+
+# 또는 로컬 개발 중이면:
+# ossing @ file:///path/to/ossing
+
+# 기타 의존성
+konlpy>=0.5.2
