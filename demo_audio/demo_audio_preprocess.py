@@ -1,9 +1,9 @@
 from dataproc.audio import preprocess_basic, save_audio
 import os
+from glob import glob
 
-def main():
-    audio_path = "sample_data/pure_tone.wav"
 
+def process_one_file(audio_path, out_dir="sample_data"):
     y_proc, sr = preprocess_basic(
         audio_path,
         sr=16000,
@@ -18,10 +18,18 @@ def main():
     print("길이(초):", len(y_proc) / sr)
 
     base, ext = os.path.splitext(os.path.basename(audio_path))
-    out_path = os.path.join("sample_data", f"{base}_preprocessed.wav")
-
+    out_path = os.path.join(out_dir, f"{base}_preprocessed.wav")
     save_audio(out_path, y_proc, sr)
     print("저장 완료:", out_path)
+
+
+def main():
+    in_dir = "sample_data"
+    for audio_path in glob(os.path.join(in_dir, "*.wav")):
+        if audio_path.endswith("_preprocessed.wav"):
+            continue
+        process_one_file(audio_path, out_dir=in_dir)
+
 
 if __name__ == "__main__":
     main()
